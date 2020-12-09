@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+</head>
+<body style="background-color: rgb(119, 6, 6);">
+    <form style="border:2px solid black; width:20% ;padding: 2%; background-color: hsl(197, 100%, 50%); margin-left: 35%;margin-top: 10%;">
+        <h2>LOGIN</h2>
+        <label>Usename</label>
+    </br>
+        <input style="width: 100%;" name="username">
+    </br>
+</br>
+<label>Password</label>
+</br>
+        <input style="width: 100%;" name="password">
+</br>
+</br>
+        <button>login</button>
+    </form>
+    
+</body>
+<script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(evt) {
+        evt.preventDefault();
+        const formData = new FormData(form);
+        const username = formData.get('username');
+        const password = formData.get('password');
+        const usrName = 'admin';
+        const pass = '12345';
+        console.log(username);
+        console.log(password);
+        if ((username == usrName) && (password == pass)) {
+            window.location.replace("./main.html");
+        }
+        else{
+            alert("Wrong Username or password!");
+            return false;
+        }
+
+        
+    });
+</script>
+<!-- <script src="./index1.js"></script> -->
+</html>

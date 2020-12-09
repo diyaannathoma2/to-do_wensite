@@ -1,0 +1,29 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+table{
+    width: 500px;
+    
+}
+th{
+    text-align: left;
+}
+table,th,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+th,td{
+    padding: 10px;
+}
+tr:nth-child(odd){
+    background-color: rgb(224, 223, 223);
+}
+
+table{
+    margin-left: 30%;
+    margin-top: 10%;
+}
+.a{
+    background-image: url(./1.jpg);
+}
